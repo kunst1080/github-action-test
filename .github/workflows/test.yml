@@ -1,4 +1,4 @@
-namte: hoge
+name: hoge
 
 on:
   push:
