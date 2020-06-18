@@ -9,6 +9,8 @@ on:
 
 jobs:
   build:
+    runs-on: ubuntu-latest
+    name: docker build test
     steps:
       - name: step 1
         uses: docker://alpine:3.8
