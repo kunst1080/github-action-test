@@ -21,10 +21,12 @@ jobs:
     name: native runner test
     steps:
       - name: step 1
+        shell: bash
         run:
           args: |
             echo "This is step 1"
       - name: step 2
+        shell: bash
         run:
           args: |
             echo "This is step 2"
