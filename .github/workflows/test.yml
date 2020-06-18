@@ -35,3 +35,12 @@ jobs:
         with:
           name: dist
           path: dist
+  job3:
+    runs-on: ubuntu-latest
+    name: Run with Dockerfile
+    steps:
+      - name: step 1
+        uses: Dockerfile
+        with:
+          args: cat /os-release
+  job2:
