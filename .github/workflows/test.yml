@@ -1,16 +1,16 @@
 namte: hoge
 
 on:
-    push:
-        #paths:
-        #- aaa/**
-        branches:
-        - master
+  push:
+    #paths:
+    #- aaa/**
+    branches:
+    - master
 
 jobs:
-    build:
-        steps:
-            - name: step 1
-            - uses: docker://alpine:3.8
-            - with:
-                args: uname -a
+  build:
+    steps:
+      - name: step 1
+        uses: docker://alpine:3.8
+        with:
+          args: uname -a
