@@ -43,4 +43,7 @@ jobs:
         uses: Dockerfile
         with:
           args: cat /os-release
-  job2:
+      - name: step 2
+        uses: Dockerfile
+        with:
+          args: pwd && ls -l
