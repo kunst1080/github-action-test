@@ -28,6 +28,7 @@ jobs:
           echo "This is step 2"
       - name: Create artifacts
         run: |
+          mkdir dist
           echo "This is an artifact" > dist/a
       - name: Archive artifacts
         uses: actions/upload-artifact@v1
