@@ -1,4 +1,4 @@
-name: hoge
+name: workflow-test
 
 on:
   push:
@@ -8,7 +8,7 @@ on:
     - master
 
 jobs:
-  build:
+  job1:
     runs-on: ubuntu-latest
     name: docker build test
     steps:
@@ -16,3 +16,15 @@ jobs:
         uses: docker://alpine:3.8
         with:
           args: uname -a
+  job2:
+    runs-on: ubuntu-latest
+    name: native runner test
+    steps:
+      - name: step 1
+        run:
+          args: |
+            echo "This is step 1"
+      - name: step 2
+        run:
+          args: |
+            echo "This is step 2"
