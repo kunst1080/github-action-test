@@ -48,4 +48,5 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v2
       - name: step 1
+        id: hello
         uses: ./
