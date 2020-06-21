@@ -41,15 +41,15 @@ jobs:
         with:
           name: dist
           path: dist
-      - name: printenv
+      - name: GitHub API
         run: |
-          printenv
-      - name: Notify slack
-        uses: rtCamp/action-slack-notify@v2.0.2
-        env:
-          SLACK_WEBHOOK: ${{ secrets.SLACK_WEBHOOK }}
-          SLACK_CHANNEL: notify
-          SLACK_MESSAGE: 'POST from GitHub Actions'
+          curl -k -s -u :${{ secrets.GITHUB_TOKEN }} https://api.github.com/kunst1080/github-action-test/artifacts
+#      - name: Notify slack
+#        uses: rtCamp/action-slack-notify@v2.0.2
+#        env:
+#          SLACK_WEBHOOK: ${{ secrets.SLACK_WEBHOOK }}
+#          SLACK_CHANNEL: notify
+#          SLACK_MESSAGE: 'POST from GitHub Actions'
   job3:
     runs-on: ubuntu-latest
     name: Run with Dockerfile
