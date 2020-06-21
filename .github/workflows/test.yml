@@ -41,6 +41,9 @@ jobs:
         with:
           name: dist
           path: dist
+      - name: printenv
+        run: |
+          printenv
       - name: Notify slack
         uses: rtCamp/action-slack-notify@v2.0.2
         env:
