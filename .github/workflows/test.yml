@@ -2,8 +2,8 @@ name: workflow-test
 
 on:
   push:
-    paths:
-    - aaa/**
+#    paths:
+#    - aaa/**
     branches:
     - master
 
@@ -41,6 +41,12 @@ jobs:
         with:
           name: dist
           path: dist
+      - name: Notify slack
+        uses: actions/checkout@v2
+        env:
+          SLACK_WEBHOOK: ${{ secrets.SLACK_WEBHOOK }}
+          SLACK_CHANNEL: general
+          SLACK_MESSAGE: 'POST from GitHub Actions'
   job3:
     runs-on: ubuntu-latest
     name: Run with Dockerfile
