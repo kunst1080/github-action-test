@@ -2,8 +2,8 @@ name: workflow-test
 
 on:
   push:
-    #paths:
-    #- aaa/**
+    paths:
+    - aaa/**
     branches:
     - master
 
