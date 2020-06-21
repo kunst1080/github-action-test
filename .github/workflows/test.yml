@@ -43,7 +43,7 @@ jobs:
           path: dist
       - name: GitHub API
         run: |
-          curl -k -s -u :${{ secrets.GITHUB_TOKEN }} https://api.github.com/kunst1080/github-action-test/artifacts
+          curl -k -s -u :${{ secrets.GITHUB_TOKEN }} https://api.github.com/kunst1080/github-action-test/actions/artifacts
 #      - name: Notify slack
 #        uses: rtCamp/action-slack-notify@v2.0.2
 #        env:
